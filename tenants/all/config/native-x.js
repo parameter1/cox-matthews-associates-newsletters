@@ -1,5 +1,5 @@
 module.exports = {
-  uri: 'https://diverseeducation.native-x.parameter1.com',
+  uri: 'https://diverse.native-x.parameter1.com',
   placements: {
     'ccnews-now': {
       sponsor: '',
