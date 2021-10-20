@@ -1,7 +1,7 @@
 {
-  "name": "@diverse-education/newsletters",
+  "name": "@cox-matthews-associates/newsletters",
   "description": "Newsletters for Diverse Education",
-  "repository": "https://github.com/parameter1/diverse-education-newsletters.git",
+  "repository": "https://github.com/parameter1/cox-matthews-associates-newsletters.git",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
   "license": "MIT",
   "private": true,
