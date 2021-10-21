@@ -8,7 +8,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['base-cms-newsletters/diverse-education'],
+  app_name: ['base-cms-newsletters/cox-matthews-associates'],
   /**
    * Your New Relic license key.
    */
