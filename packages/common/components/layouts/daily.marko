@@ -20,6 +20,18 @@ $ const nativeX = config.getAsObject("nativeX");
     <common-body-wrapper-block newsletter=newsletter date=date footer=input.footer>
       <@body>
 
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          section-name="Featured"
+          with-image=true
+          image-position="right"
+          newsletter=newsletter
+          limit=1
+          skip=0
+        />
+
         <!-- Ad Slot 1 -->
         <common-ad-emailx-block
           newsletter=newsletter
@@ -27,29 +39,23 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
         />
 
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          section-name="Main"
-          newsletter=newsletter
-          limit=1
-          skip=0
-        />
+        <!-- Add later when ready for NativeX ads
 
-        <!-- Advertisement / Promotion block -->
-        <common-ad-wrapper-block
+        Advertisement / Promotion block -->
+        <!-- <common-ad-wrapper-block
           date=date
           newsletter=newsletter
           promotion-component="advertisement-block"
           placement-id=get(nativeX, `placements.${newsletter.alias}.native-slot-1`)
-        />
+        /> -->
 
         <!-- Content list block -->
         <common-content-list-block
           date=date
+          with-section=false
           section-name="Main"
           newsletter=newsletter
-          limit=1
+          limit=2
           skip=1
         />
 
@@ -65,7 +71,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           section-name="Main"
           newsletter=newsletter
-          limit=1
+          limit=2
           skip=2
         />
 
@@ -81,7 +87,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           section-name="Main"
           newsletter=newsletter
-          limit=1
+          limit=2
           skip=3
         />
 
@@ -100,57 +106,6 @@ $ const nativeX = config.getAsObject("nativeX");
           limit=1
           skip=4
         />
-
-        <!-- Ad Slot 5 -->
-        <!-- <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-5', alias: newsletter.alias })
-          date=date
-        /> -->
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          section-name="Main"
-          newsletter=newsletter
-          limit=1
-          skip=5
-        />
-
-        <!-- Ad Slot 6 -->
-        <!-- <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-6', alias: newsletter.alias })
-          date=date
-        /> -->
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          section-name="Main"
-          newsletter=newsletter
-          limit=1
-          skip=6
-        />
-
-        <!-- Ad Slot 7 -->
-        <!-- <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-7', alias: newsletter.alias })
-          date=date
-        /> -->
-
-         <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          section-name="Main"
-          newsletter=newsletter
-          limit=3
-          skip=7
-        />
-
-        <!-- Channels -->
-        <!-- <common-channel-buttons-block newsletter=newsletter /> -->
 
       </@body>
     </common-body-wrapper-block>
