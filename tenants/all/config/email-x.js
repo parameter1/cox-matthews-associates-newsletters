@@ -54,6 +54,32 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('diverse-weekly-recap', [
+    {
+      name: 'ad-slot-1',
+      id: '6176b9ba0b81fa95ca806bdc',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '6176b9d30b81fa88a1806bef',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '6176b9e6c9a53c9558c6c489',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '6176b9f7c9a53c2beac6c493',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;

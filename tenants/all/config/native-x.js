@@ -17,7 +17,7 @@ module.exports = {
       'native-slot-1': '',
     },
     'diverse-weekly-recap': {
-      'native-slot-1': '',
+      'native-slot-1': '6176ba2a2f211d0001c09a00',
     },
   },
 };
