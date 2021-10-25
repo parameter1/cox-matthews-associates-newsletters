@@ -5,7 +5,7 @@ module.exports = {
       'native-slot-1': '617190722f211d0001c095dc',
     },
     'diverse-daily': {
-      'native-slot-1': '',
+      'native-slot-1': '6176b70d2f211d0001c099db',
     },
     'diverse-health': {
       'native-slot-1': '',
