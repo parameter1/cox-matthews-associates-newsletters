@@ -11,7 +11,7 @@ module.exports = {
       'native-slot-1': '617813f92f211d0001c09a76',
     },
     'diverse-hiring': {
-      'native-slot-1': '',
+      'native-slot-1': '6178153d2175830001464af8',
     },
     'diverse-military': {
       'native-slot-1': '',

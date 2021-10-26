@@ -106,6 +106,32 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('diverse-hiring', [
+    {
+      name: 'ad-slot-1',
+      id: '617814e50b81fa693f806d98',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '617814f8c9a53c5d1fc6c643',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '617815080b81fa9295806dc6',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '61781518c9a53c3c7bc6c656',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;
