@@ -80,6 +80,32 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('diverse-health', [
+    {
+      name: 'ad-slot-1',
+      id: '6178138b0b81fa2bb9806d45',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '6178139b0b81fa7067806d58',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '617813abc9a53c026fc6c5f8',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '617813c0c9a53c19f9c6c60b',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;
