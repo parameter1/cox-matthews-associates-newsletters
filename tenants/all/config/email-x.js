@@ -80,6 +80,84 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('diverse-health', [
+    {
+      name: 'ad-slot-1',
+      id: '6178138b0b81fa2bb9806d45',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '6178139b0b81fa7067806d58',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '617813abc9a53c026fc6c5f8',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '617813c0c9a53c19f9c6c60b',
+      width: 600,
+      height: 100,
+    },
+  ])
+  .setAdUnits('diverse-hiring', [
+    {
+      name: 'ad-slot-1',
+      id: '617814e50b81fa693f806d98',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '617814f8c9a53c5d1fc6c643',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '617815080b81fa9295806dc6',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '61781518c9a53c3c7bc6c656',
+      width: 600,
+      height: 100,
+    },
+  ])
+  .setAdUnits('diverse-military', [
+    {
+      name: 'ad-slot-1',
+      id: '6178167dc9a53c7bd9c6c68e',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '6178168fc9a53cf8e8c6c698',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '6178169f0b81fa2375806e18',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '617816b1c9a53c66b7c6c6b4',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;
