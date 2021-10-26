@@ -7,7 +7,7 @@ module.exports = {
       { href: '', label: '' },
     ],
     socialMedia: {
-      imagePath: '',
+      imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
         { provider: 'facebook', href: '', target: '_blank' },
         { provider: 'twitter', href: '', target: '_blank' },
@@ -24,7 +24,7 @@ module.exports = {
       { href: '', label: '' },
     ],
     socialMedia: {
-      imagePath: '',
+      imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
         { provider: 'facebook', href: '', target: '_blank' },
         { provider: 'twitter', href: '', target: '_blank' },
