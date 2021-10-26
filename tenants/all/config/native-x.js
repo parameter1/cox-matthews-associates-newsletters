@@ -14,7 +14,7 @@ module.exports = {
       'native-slot-1': '6178153d2175830001464af8',
     },
     'diverse-military': {
-      'native-slot-1': '',
+      'native-slot-1': '617816d22175830001464b39',
     },
     'diverse-weekly-recap': {
       'native-slot-1': '6176ba2a2f211d0001c09a00',

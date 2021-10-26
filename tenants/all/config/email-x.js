@@ -132,6 +132,32 @@ config
       width: 600,
       height: 100,
     },
+  ])
+  .setAdUnits('diverse-military', [
+    {
+      name: 'ad-slot-1',
+      id: '6178167dc9a53c7bd9c6c68e',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-2',
+      id: '6178168fc9a53cf8e8c6c698',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-3',
+      id: '6178169f0b81fa2375806e18',
+      width: 600,
+      height: 100,
+    },
+    {
+      name: 'ad-slot-4',
+      id: '617816b1c9a53c66b7c6c6b4',
+      width: 600,
+      height: 100,
+    },
   ]);
 
 module.exports = config;
