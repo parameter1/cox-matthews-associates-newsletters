@@ -20,6 +20,13 @@ $ const nativeX = config.getAsObject("nativeX");
     <common-body-wrapper-block newsletter=newsletter date=date footer=input.footer>
       <@body>
 
+        <!-- Ad Slot 1 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-1', alias: newsletter.alias })
+          date=date
+        />
+
         <!-- Content list block -->
         <common-content-list-block
           date=date
@@ -30,13 +37,6 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
           limit=1
           skip=0
-        />
-
-        <!-- Ad Slot 1 -->
-        <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-1', alias: newsletter.alias })
-          date=date
         />
 
         <!-- Add later when ready for NativeX ads
@@ -52,10 +52,10 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          with-section=false
+          with-section=true
           section-name="Main"
           newsletter=newsletter
-          limit=2
+          limit=1
           skip=0
         />
 
@@ -69,10 +69,11 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
+          with-section=false
           section-name="Main"
           newsletter=newsletter
           limit=2
-          skip=2
+          skip=1
         />
 
         <!-- Ad Slot 3 -->
@@ -88,7 +89,7 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Main"
           newsletter=newsletter
           limit=2
-          skip=4
+          skip=3
         />
 
         <!-- Ad Slot 4 -->
@@ -104,7 +105,7 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Main"
           newsletter=newsletter
           limit=1
-          skip=6
+          skip=5
         />
 
       </@body>
