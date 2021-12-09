@@ -4,5 +4,17 @@
   },
   "<common-weekly-layout>": {
     "template": "./weekly.marko"
+  },
+  "<common-ccnews-now-layout>": {
+    "template": "./ccnews-now.marko"
+  },
+  "<common-hiring-layout>": {
+    "template": "./hiring.marko"
+  },
+  "<common-health-layout>": {
+    "template": "./health.marko"
+  },
+  "<common-military-layout>": {
+    "template": "./military.marko"
   }
 }
