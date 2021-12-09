@@ -20,15 +20,15 @@ const config = {
   },
   'diverse-health': {
     name: 'Diverse Health',
-    ...brands.diverse,
+    ...brands.health,
   },
   'diverse-hiring': {
     name: 'Diverse Hiring',
-    ...brands.diverse,
+    ...brands.hiring,
   },
   'diverse-military': {
     name: 'Diverse Military',
-    ...brands.diverse,
+    logoSrc: '/files/base/diverse/all/image/static/DiverseMilitary.png',
   },
   'diverse-weekly-recap': {
     name: 'Diverse Weekly Recap',
