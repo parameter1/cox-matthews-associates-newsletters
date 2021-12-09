@@ -30,13 +30,26 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
+          with-header=true
           with-section=false
-          section-name="Featured"
-          with-image=true
-          image-position="right"
+          section-name="Featured Stories"
           newsletter=newsletter
-          limit=1
-          skip=0
+        />
+
+        <!-- Ad Slot 2 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="Views"
+          newsletter=newsletter
         />
 
         <!-- Add later when ready for NativeX ads
@@ -52,28 +65,10 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          with-section=true
-          section-name="Main"
-          newsletter=newsletter
-          limit=1
-          skip=0
-        />
-
-        <!-- Ad Slot 2 -->
-        <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
-          date=date
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
+          with-header=true
           with-section=false
-          section-name="Main"
+          section-name="Featured Employers"
           newsletter=newsletter
-          limit=2
-          skip=1
         />
 
         <!-- Ad Slot 3 -->
@@ -86,10 +81,21 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          section-name="Main"
+          with-header=true
+          with-section=false
+          section-name="More Headlines"
           newsletter=newsletter
-          limit=2
-          skip=3
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="On the Move"
+          with-image=true
+          image-position="right"
+          newsletter=newsletter
         />
 
         <!-- Ad Slot 4 -->
@@ -102,10 +108,10 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          section-name="Main"
+          with-header=true
+          with-section=false
+          section-name="Featured Jobs"
           newsletter=newsletter
-          limit=1
-          skip=5
         />
 
       </@body>

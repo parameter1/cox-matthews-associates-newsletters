@@ -30,9 +30,10 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          with-header=true
           with-section=false
-          section-name="From DiverseEducation.com"
+          section-name="Main"
+          with-image=true
+          image-position="right"
           newsletter=newsletter
         />
 
@@ -48,7 +49,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
-          section-name="From the Magazine"
+          section-name="On the Move"
           newsletter=newsletter
         />
 
@@ -62,15 +63,6 @@ $ const nativeX = config.getAsObject("nativeX");
           placement-id=get(nativeX, `placements.${newsletter.alias}.native-slot-1`)
         /> -->
 
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="From Diverse - At Large"
-          newsletter=newsletter
-        />
-
         <!-- Ad Slot 3 -->
         <common-ad-emailx-block
           newsletter=newsletter
@@ -83,7 +75,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
-          section-name="In the Margins"
+          section-name="Diverse Executive Careers"
           newsletter=newsletter
         />
 
@@ -99,9 +91,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
-          section-name="New Hires"
-          with-image=true
-          image-position="right"
+          section-name="Featured Jobs"
           newsletter=newsletter
         />
 
