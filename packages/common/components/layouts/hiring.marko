@@ -35,6 +35,17 @@ $ const nativeX = config.getAsObject("nativeX");
           with-image=true
           image-position="right"
           newsletter=newsletter
+          limit=1
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=false
+          with-section=false
+          section-name="Main"
+          newsletter=newsletter
+          skip=1
         />
 
         <!-- Ad Slot 2 -->
@@ -49,6 +60,8 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
+          with-image=true
+          image-position="right"
           section-name="On the Move"
           newsletter=newsletter
         />
