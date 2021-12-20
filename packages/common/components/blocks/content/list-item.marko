@@ -8,6 +8,7 @@ $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
 $ const continueReading = defaultValue(input.continueReading, false);
+$ const withTeaser = defaultValue(input.withTeaser, true);
 
 $ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
 $ const contentUrl = `${content.siteContext.url}${queryString}`
@@ -152,12 +153,14 @@ $ const sponsoredTagStyle = {
             </a>
           </td>
         </tr>
-        <common-table-spacer-element height="5" />
-        <tr>
-          <td align="left" valign="middle" style="font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
-            ${content.teaser}
-          </td>
-        </tr>
+        <if(withTeaser)>
+          <common-table-spacer-element height="5" />
+          <tr>
+            <td align="left" valign="middle" style="font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
+              ${content.teaser}
+            </td>
+          </tr>
+        </if>
         <if(continueReading)>
           <common-table-spacer-element height="9" />
           <common-cta-element link-url=contentUrl />
