@@ -7,7 +7,7 @@ $ const { content, urlParams } = input;
 $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
-$ const continueReading = defaultValue(input.continueReading, false);
+$ const voteNow = defaultValue(input.voteNow, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
 
 $ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
@@ -102,7 +102,7 @@ $ const sponsoredTagStyle = {
                               ${content.teaser}
                             </td>
                           </tr>
-                          <if(continueReading)>
+                          <if(voteNow)>
                             <common-table-spacer-element height="9" />
                             <common-cta-element link-url=contentUrl />
                           </if>
@@ -137,7 +137,7 @@ $ const sponsoredTagStyle = {
                   ${content.teaser}
                 </td>
               </tr>
-              <if(continueReading)>
+              <if(voteNow)>
                 <common-table-spacer-element height="9" />
                 <common-cta-element link-url=contentUrl />
               </if>
@@ -161,7 +161,7 @@ $ const sponsoredTagStyle = {
             </td>
           </tr>
         </if>
-        <if(continueReading)>
+        <if(voteNow)>
           <common-table-spacer-element height="9" />
           <common-cta-element link-url=contentUrl />
         </if>
