@@ -16,6 +16,7 @@ const config = {
   },
   'diverse-daily': {
     name: 'Diverse Daily',
+    logoSrc: '/files/base/diverse/all/image/static/diverse-education-logo.png',
     ...brands.diverse,
   },
   'diverse-health': {
@@ -32,6 +33,7 @@ const config = {
   },
   'diverse-weekly-recap': {
     name: 'Diverse Weekly Recap',
+    logoSrc: '/files/base/diverse/all/image/static/weekly-recap-logo.png',
     ...brands.diverse,
   },
 };

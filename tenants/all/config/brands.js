@@ -1,7 +1,6 @@
 module.exports = {
   diverse: {
     brandName: 'Diverse',
-    logoSrc: '/files/base/diverse/all/image/static/diverse-education-logo.png',
     subscribeLink: '',
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
@@ -38,7 +37,7 @@ module.exports = {
   },
   hiring: {
     brandName: 'Diverse Hiring',
-    logoSrc: '/files/base/diverse/all/image/static/diverse-jobs-logo.png',
+    logoSrc: '/files/base/diverse/all/image/static/diverse-hiring-logo.png',
     subscribeLink: '',
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
