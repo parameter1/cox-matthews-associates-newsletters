@@ -110,7 +110,7 @@ $ const sponsoredTagStyle = {
           </td>
         </tr>
         <tr>
-          <td align="left" valign="top" class="show_on_mobile" style="display: none;mso-hide: all;">
+          <td align="left" valign="top" class="hide_on_mobile" style="display: none;mso-hide: all;">
             <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="mso-hide: all;">
               <common-table-spacer-element height="10" />
               <tr>
@@ -127,7 +127,7 @@ $ const sponsoredTagStyle = {
         </tr>
       </if>
 
-      <if(withImage === false && sectionName === 'In the Margins')>
+      <else-if(sectionName === 'In the Margins')>
         <tr>
           <td align="center" valign="top" dir="ltr">
             <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -175,7 +175,7 @@ $ const sponsoredTagStyle = {
           </td>
         </tr>
         <tr>
-          <td align="left" valign="top" class="show_on_mobile" style="display: none;mso-hide: all;">
+          <td align="left" valign="top" class="hide_on_mobile" style="display: none;mso-hide: all;">
             <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="mso-hide: all;">
               <common-table-spacer-element height="10" />
               <tr>
@@ -190,7 +190,7 @@ $ const sponsoredTagStyle = {
             </table>
           </td>
         </tr>
-      </if>
+      </else-if>
 
       <else>
         <tr>
