@@ -16,22 +16,24 @@ const config = {
   },
   'diverse-daily': {
     name: 'Diverse Daily',
+    logoSrc: '/files/base/diverse/all/image/static/diverse-education-logo.png',
     ...brands.diverse,
   },
   'diverse-health': {
     name: 'Diverse Health',
-    ...brands.diverse,
+    ...brands.health,
   },
   'diverse-hiring': {
     name: 'Diverse Hiring',
-    ...brands.diverse,
+    ...brands.hiring,
   },
   'diverse-military': {
     name: 'Diverse Military',
-    ...brands.diverse,
+    logoSrc: '/files/base/diverse/all/image/static/DiverseMilitary.png',
   },
   'diverse-weekly-recap': {
     name: 'Diverse Weekly Recap',
+    logoSrc: '/files/base/diverse/all/image/static/weekly-recap-logo.png',
     ...brands.diverse,
   },
 };

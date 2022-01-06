@@ -30,10 +30,8 @@ $ const nativeX = config.getAsObject("nativeX");
         <!-- Content list block -->
         <common-content-list-block
           date=date
-          with-header=true
           with-section=false
-          with-teaser=true
-          section-name="Featured Stories"
+          section-name="Main"
           newsletter=newsletter
         />
 
@@ -49,16 +47,9 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
-          section-name="Views"
-          newsletter=newsletter
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="Blogs"
+          section-name="On the Move"
+          with-image=true
+          image-position="right"
           newsletter=newsletter
         />
 
@@ -72,15 +63,6 @@ $ const nativeX = config.getAsObject("nativeX");
           placement-id=get(nativeX, `placements.${newsletter.alias}.native-slot-1`)
         /> -->
 
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="Featured Employers"
-          newsletter=newsletter
-        />
-
         <!-- Ad Slot 3 -->
         <common-ad-emailx-block
           newsletter=newsletter
@@ -93,19 +75,7 @@ $ const nativeX = config.getAsObject("nativeX");
           date=date
           with-header=true
           with-section=false
-          with-teaser=false
-          section-name="More Headlines"
-          newsletter=newsletter
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="On the Move"
-          with-image=true
-          image-position="right"
+          section-name="Featured Employers"
           newsletter=newsletter
         />
 
@@ -123,25 +93,6 @@ $ const nativeX = config.getAsObject("nativeX");
           with-section=false
           section-name="Featured Jobs"
           newsletter=newsletter
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="Podcasts"
-          newsletter=newsletter
-        />
-
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-teaser=false
-          with-section=false
-          section-name="Poll"
-          newsletter=newsletter
-          vote-now=true
         />
 
       </@body>

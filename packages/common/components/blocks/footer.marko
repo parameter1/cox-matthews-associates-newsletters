@@ -104,28 +104,6 @@ $ const taglineStyle = {
                 </tr>
                 <common-table-spacer-element height="21" />
 
-                $ const contactLinks = getAsArray(newsletterConfig, "contactLinks");
-                <if(contactLinks.length)>
-                  <tr>
-                    <td align="left" valign="top" style=standardStyle>
-                      Contact
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="left" valign="top" style=standardStyle>
-                      <for|link, index| of=contactLinks>
-                        <a href=link.href style=standardUnderlineStyle>
-                          ${link.label}
-                        </a>
-                        <if(index < (contactLinks.length - 1))>
-                          <span style="padding: 0 10px;">|</span>
-                        </if>
-                      </for>
-                    </td>
-                  </tr>
-                  <common-table-spacer-element height="21" />
-                </if>
-
                 <tr>
                   <td align="left" valign="top" style=smallerStyle>
                     You are receiving this email because you subscribed to receive relevant news from ${publicationName}.
