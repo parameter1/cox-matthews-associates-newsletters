@@ -9,6 +9,7 @@ $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withHeader = defaultValue(input.withHeader, false);
 $ const withSection = defaultValue(input.withSection, true);
 $ const voteNow = defaultValue(input.voteNow, false);
+$ const readMore = defaultValue(input.readMore, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
 
@@ -36,6 +37,7 @@ $ const queryParams = {
         url-params=urlParams
         with-teaser=withTeaser
         section-name=sectionName
+        read-more=readMore
       />
     </for>
   </if>
