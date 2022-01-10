@@ -8,8 +8,9 @@ $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
 $ const voteNow = defaultValue(input.voteNow, false);
+$ const readMore = defaultValue(input.readMore, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
-$ const sectionName = defaultValue(input.sectionName, 'In the Margins');
+$ const sectionName = defaultValue(input.sectionName, 'In the Margins' || 'Poll');
 
 $ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
 $ const contentUrl = `${content.siteContext.url}${queryString}`
@@ -40,6 +41,21 @@ $ const sponsoredTagStyle = {
   ...tagStyle,
   "color": "#a91b20",
 }
+
+$ const buttonStyle = {
+  "background-color": "#436daa",
+  "border": "none",
+  "border-radius": "4px",
+  "color": "#ffffff",
+  "display": "inline-block",
+  "letter-spacing": ".8px",
+  "line-height": "1.25",
+  "text-align": "center",
+  "text-transform": "uppercase",
+  "font-weight": "700",
+  "font-size": "12px",
+  "padding": "12px",
+};
 
 <tr>
   <td align="center" valign="top">
@@ -83,7 +99,7 @@ $ const sponsoredTagStyle = {
                               ${content.teaser}
                             </td>
                           </tr>
-                          <if(voteNow)>
+                          <if(readMore)>
                             <common-table-spacer-element height="9" />
                             <common-cta-element link-url=contentUrl />
                           </if>
@@ -118,7 +134,7 @@ $ const sponsoredTagStyle = {
                   ${content.teaser}
                 </td>
               </tr>
-              <if(voteNow)>
+              <if(readMore)>
                 <common-table-spacer-element height="9" />
                 <common-cta-element link-url=contentUrl />
               </if>
@@ -183,13 +199,41 @@ $ const sponsoredTagStyle = {
                   ${content.teaser}
                 </td>
               </tr>
-              <if(voteNow)>
+              <if(readMore)>
                 <common-table-spacer-element height="9" />
                 <common-cta-element link-url=contentUrl />
               </if>
             </table>
           </td>
         </tr>
+      </else-if>
+
+      <else-if(sectionName === "Poll")>
+        <tr>
+          <td align="center" valign="top">
+            <a style="font-size: 24px;line-height: 28px;color: #202022;font-weight: 700;text-decoration: none;" href=contentUrl>
+              ${content.name}
+            </a>
+          </td>
+        </tr>
+        <if(withTeaser)>
+          <common-table-spacer-element height="5" />
+          <tr>
+            <td align="center" valign="middle" style="font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
+              ${content.teaser}
+            </td>
+          </tr>
+        </if>
+        <if(voteNow)>
+          <common-table-spacer-element height="9" />
+          <tr>
+            <td align="center" valign="middle">
+              <a href=contentUrl target="_blank">
+                <span style=buttonStyle>Vote Now</span>
+              </a>
+            </td>
+          </tr>
+        </if>
       </else-if>
 
       <else>
@@ -208,7 +252,7 @@ $ const sponsoredTagStyle = {
             </td>
           </tr>
         </if>
-        <if(voteNow)>
+        <if(readMore)>
           <common-table-spacer-element height="9" />
           <common-cta-element link-url=contentUrl />
         </if>
