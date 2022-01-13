@@ -17,5 +17,8 @@
   },
   "<common-view-online-block>": {
     "template": "./view-online.marko"
+  },
+  "<common-daily-header-block>": {
+    "template": "./daily-header.marko"
   }
 }

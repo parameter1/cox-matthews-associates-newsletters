@@ -1,0 +1,36 @@
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { config } = out.global
+
+$ const { newsletter, date } = input;
+
+$ const newsletterConfig = config.get(newsletter.alias);
+$ const name = (newsletterConfig.name || newsletter.name);
+$ const dateFormat = defaultValue(input.dateFormat, "MMMM DD, YYYY");
+
+<tr>
+  <td align="center" valign="top">
+    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <common-table-spacer-element height="12" />
+      <tr>
+        <td align="center" valign="top">
+          <table role="presentation" width="610" border="0" cellspacing="0" cellpadding="0" class="wrap003">
+            <tr>
+              <td align="center" valign="center">
+                <common-logo-element newsletter=newsletter />
+              </td>
+            </tr>
+            <common-table-spacer-element height="20" />
+            <tr>
+              <td align="center" valign="center">
+                ${name} - ${input.date.format(dateFormat)}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <common-table-spacer-element height="9" />
+    </table>
+  </td>
+</tr>
+<common-table-spacer-element />
