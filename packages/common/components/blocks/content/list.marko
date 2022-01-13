@@ -12,6 +12,7 @@ $ const voteNow = defaultValue(input.voteNow, false);
 $ const readMore = defaultValue(input.readMore, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
+$ const adParams = input.adParams;
 
 $ const queryParams = {
   date: date.valueOf(),
@@ -27,7 +28,14 @@ $ const queryParams = {
     <if(withHeader)>
       <common-list-header-element title=sectionName />
     </if>
-    <for|content| of=nodes>
+    <for|content, index| of=nodes>
+    <if(index === 2 && adParams)>
+        <common-ad-emailx-block
+          newsletter=adParams.newsletter
+          ad-unit=adParams.emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
+          date=adParams.date
+        />
+    </if>
       <common-content-list-item-block
         content=content
         with-section=withSection
