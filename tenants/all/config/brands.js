@@ -5,11 +5,11 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/DiverseIssuesInHigherEducation/', target: '_blank' },
-        { provider: 'twitter', href: 'https://twitter.com/DiverseIssues', target: '_blank' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/diverse-issues-in-higher-education/', target: '_blank' },
-        { provider: 'youtube', href: 'https://www.youtube.com/channel/UCXVYpTBoF5lP0FYAz2-ebcQ', target: '_blank' },
-        { provider: 'instagram', href: 'https://www.instagram.com/diverseissuesinhighereducation/' },
+        { provider: 'facebook-black', href: 'https://www.facebook.com/DiverseIssuesInHigherEducation/', target: '_blank' },
+        { provider: 'twitter-black', href: 'https://twitter.com/DiverseIssues', target: '_blank' },
+        { provider: 'linkedin-black', href: 'https://www.linkedin.com/company/diverse-issues-in-higher-education/', target: '_blank' },
+        { provider: 'youtube-black', href: 'https://www.youtube.com/channel/UCXVYpTBoF5lP0FYAz2-ebcQ', target: '_blank' },
+        { provider: 'instagram-black', href: 'https://www.instagram.com/diverseissuesinhighereducation/' },
       ],
     },
   },
@@ -20,7 +20,7 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/CcNewsNow', target: '_blank' },
+        { provider: 'facebook-black', href: 'https://www.facebook.com/CcNewsNow', target: '_blank' },
       ],
     },
   },
@@ -31,7 +31,7 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/diverseissueshealth/', target: '_blank' },
+        { provider: 'facebook-black', href: 'https://www.facebook.com/diverseissueshealth/', target: '_blank' },
       ],
     },
   },
@@ -42,9 +42,9 @@ module.exports = {
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
-        { provider: 'facebook', href: 'https://www.facebook.com/DiverseJobs/', target: '_blank' },
-        { provider: 'twitter', href: 'https://twitter.com/diverseissues', target: '_blank' },
-        { provider: 'linkedin', href: 'https://www.linkedin.com/company/diverse-issues-in-higher-education/', target: '_blank' },
+        { provider: 'facebook-black', href: 'https://www.facebook.com/DiverseJobs/', target: '_blank' },
+        { provider: 'twitter-black', href: 'https://twitter.com/diverseissues', target: '_blank' },
+        { provider: 'linkedin-black', href: 'https://www.linkedin.com/company/diverse-issues-in-higher-education/', target: '_blank' },
       ],
     },
   },
