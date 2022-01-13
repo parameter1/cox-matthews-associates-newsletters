@@ -46,11 +46,13 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Main"
           newsletter=newsletter
           skip=1
-          ad-params={
-            newsletter,
-            emailX,
-            date
-          }
+        />
+
+        <!-- Ad Slot 2 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
+          date=date
         />
 
         <!-- Content list block -->
