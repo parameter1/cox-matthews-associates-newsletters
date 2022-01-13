@@ -34,13 +34,11 @@ $ const nativeX = config.getAsObject("nativeX");
           with-section=false
           section-name="Featured Stories"
           newsletter=newsletter
-        />
-
-        <!-- Ad Slot 2 -->
-        <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
-          date=date
+          ad-params={
+            newsletter,
+            emailX,
+            date
+          }
         />
 
         <!-- Content list block -->
