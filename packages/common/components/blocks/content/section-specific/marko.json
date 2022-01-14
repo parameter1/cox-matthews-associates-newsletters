@@ -1,0 +1,11 @@
+{
+  "<on-the-move-list-item-block>": {
+    "template": "./on-the-move.marko"
+  },
+  "<podcast-list-item-block>": {
+    "template": "./podcast.marko"
+  },
+  "<poll-list-item-block>": {
+    "template": "./poll.marko"
+  }
+}
