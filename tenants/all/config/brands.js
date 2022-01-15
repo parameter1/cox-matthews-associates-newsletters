@@ -17,35 +17,15 @@ module.exports = {
     brandName: 'CCNews',
     logoSrc: '/files/base/diverse/all/image/static/CCNews.jpeg',
     subscribeLink: '',
-    socialMedia: {
-      imagePath: '/files/base/diverse/all/image/static/newsletter/',
-      links: [
-        { provider: 'facebook-black', href: 'https://www.facebook.com/CcNewsNow', target: '_blank' },
-      ],
-    },
   },
   health: {
     brandName: 'Diverse Health',
     logoSrc: '/files/base/diverse/all/image/static/dh-logo.png',
     subscribeLink: '',
-    socialMedia: {
-      imagePath: '/files/base/diverse/all/image/static/newsletter/',
-      links: [
-        { provider: 'facebook-black', href: 'https://www.facebook.com/diverseissueshealth/', target: '_blank' },
-      ],
-    },
   },
   hiring: {
     brandName: 'Diverse Hiring',
     logoSrc: '/files/base/diverse/all/image/static/diverse-hiring-logo.png',
     subscribeLink: '',
-    socialMedia: {
-      imagePath: '/files/base/diverse/all/image/static/newsletter/',
-      links: [
-        { provider: 'facebook-black', href: 'https://www.facebook.com/DiverseJobs/', target: '_blank' },
-        { provider: 'twitter-black', href: 'https://twitter.com/diverseissues', target: '_blank' },
-        { provider: 'linkedin-black', href: 'https://www.linkedin.com/company/diverse-issues-in-higher-education/', target: '_blank' },
-      ],
-    },
   },
 };
