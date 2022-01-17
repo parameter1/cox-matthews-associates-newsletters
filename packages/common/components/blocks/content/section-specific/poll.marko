@@ -1,0 +1,27 @@
+$ const { content, withTeaser, voteNow, contentUrl, buttonStyle } = input;
+
+<tr>
+  <td align="center" valign="top">
+    <a style="font-size: 24px;line-height: 28px;color: #436daa;font-weight: 700;text-decoration: none;" href=contentUrl>
+      ${content.name}
+    </a>
+  </td>
+</tr>
+<if(withTeaser)>
+  <common-table-spacer-element height="5" />
+  <tr>
+    <td align="center" valign="middle" style="font-size: 17px;line-height: 23px;color: #202022;font-weight: 400;">
+      ${content.teaser}
+    </td>
+  </tr>
+</if>
+<if(voteNow)>
+  <common-table-spacer-element height="9" />
+  <tr>
+    <td align="center" valign="middle">
+      <a href=contentUrl target="_blank">
+        <span style=buttonStyle>&nbsp;Vote Now&nbsp;</span>
+      </a>
+    </td>
+  </tr>
+</if>

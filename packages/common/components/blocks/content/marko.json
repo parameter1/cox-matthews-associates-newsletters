@@ -1,4 +1,7 @@
 {
+  "taglib-imports": [
+    "./section-specific/marko.json"
+  ],
   "<common-content-background-block>": {
     "template": "./background.marko"
   },
@@ -10,5 +13,11 @@
   },
   "<common-content-magazine-cover-block>": {
     "template": "./magazine-cover.marko"
+  },
+  "<common-content-with-image-list-item-block>": {
+    "template": "./with-image.marko"
+  },
+  "<common-content-no-image-list-item-block>": {
+    "template": "./no-image.marko"
   }
 }
