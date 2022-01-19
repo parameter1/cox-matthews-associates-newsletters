@@ -23,19 +23,17 @@ $ const queryParams = {
   queryFragment,
 };
 
+$ const adSlotNames = {
+  '1': { name: 'ad-slot-2'},
+  '3': { name: 'ad-slot-3'},
+};
+
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
   <if(nodes.length)>
     <if(withHeader)>
       <common-list-header-element title=sectionName />
     </if>
     <for|content, index| of=nodes>
-    <if(index === 2 && adParams)>
-        <common-ad-emailx-block
-          newsletter=adParams.newsletter
-          ad-unit=adParams.emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
-          date=adParams.date
-        />
-    </if>
       <common-content-list-item-block
         content=content
         with-section=withSection
@@ -47,6 +45,14 @@ $ const queryParams = {
         section-name=sectionName
         read-more=readMore
       />
+    <if(( adSlotNames[index] && adParams ))>
+    $ const { name } = adSlotNames[index]
+      <common-ad-emailx-block
+        newsletter=adParams.newsletter
+        ad-unit=adParams.emailX.getAdUnit({ name, alias: newsletter.alias })
+        date=adParams.date
+      />
+    </if>
     </for>
   </if>
 </marko-web-query>

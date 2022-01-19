@@ -4,7 +4,7 @@ import { getAsObject } from "@parameter1/base-cms-object-path";
 import queryFragment from "@cox-matthews-associates/package-common/graphql/fragments/content-list";
 
 $ const { config } = out.global;
-$ const { date, newsletter, publicationId, imgWidth } = input;
+$ const { date, newsletter, publicationId } = input;
 
 $ const sectionStyle = {
   "font-size": "15px",
@@ -32,14 +32,13 @@ $ const buttonStyle = {
   "padding": "12px",
 };
 
-<marko-web-query|{ node: latestIssue, nodes }|
+<marko-web-query|{ node: latestIssue }|
   name="magazine-latest-issue"
   params={
   publicationId: publicationId,
   queryFragment: latestIssueFragment
   }
 >
-
   <tr>
     <td align="center" valign="top">
       <table role="presentation" width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
@@ -60,41 +59,23 @@ $ const buttonStyle = {
   </tr>
   <tr>
     <td align="center" valign="top">
-      <table role="presentation" width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
+      <table role="presentation" width="25%" border="0" align="left"  cellpadding="0" cellspacing="0">
         <tr>
-          <td align="center">
+          <td align="left" style="padding-left: 15px">
             <marko-core-obj-value|{ value: coverImage }| obj=latestIssue field="coverImage" as="object">
               <marko-newsletter-imgix
                 src=coverImage.src
                 alt=coverImage.alt
-                options={ w: imgWidth }
-                attrs={ border: 0, width: imgWidth }
+                attrs={ border: 0, width: 200, height: 200 }
               >
                 <@link href=latestIssue.digitalEditionUrl target="_blank" />
               </marko-newsletter-imgix>
             </marko-core-obj-value>
           </td>
+          <table>
+            <from-the-magazine-block date=date newsletter=newsletter />
+          </table>
         </tr>
-        <common-table-spacer-element />
-        <table role="presentation" width="600" border="0" align="center"  cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-              <a href=latestIssue.digitalEditionUrl target="_blank">
-                <span style=buttonStyle>Digital Edition</span>
-              </a>
-            </td>
-            <td>
-              <a href="https://diverse.dragonforms.com/loading.do?omedasite=di_new" target="_blank">
-                <span style=buttonStyle>Subscribe</span>
-              </a>
-            </td>
-            <td align="right">
-              <a href="https://www.diverseeducation.com/magazine/61128276dc429e5a098b4576" target="_blank">
-                <span style=buttonStyle>Archives</span>
-              </a>
-            </td>
-          </tr>
-        </table>
         <common-table-spacer-element height=32 />
       </table>
     </td>

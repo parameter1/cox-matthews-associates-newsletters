@@ -1,0 +1,25 @@
+import queryFragment from "@cox-matthews-associates/package-common/graphql/fragments/content-list";
+
+$ const { date, newsletter } = input;
+
+$ const queryParams = {
+  date: date.valueOf(),
+  newsletterId: newsletter.id,
+  sectionName: 'From the Magazine',
+  queryFragment,
+};
+
+<marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
+  <if(nodes.length)>
+    <for|content, index| of=nodes>
+      <tr>
+          <td align="left" valign="top" style="padding-left: 5px; padding-right: 15px">
+            <a style="font-size: 24px;line-height: 28px;color: #436daa;font-weight: 700;text-decoration: none;" href=content.siteContext.url>
+              &bull;  ${content.name}
+            </a>
+        </td>
+      </tr>
+      <common-table-spacer-element />
+    </for>
+  </if>
+</marko-web-query>

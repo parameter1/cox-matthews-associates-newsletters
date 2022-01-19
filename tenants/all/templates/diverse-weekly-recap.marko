@@ -1,1 +1,7 @@
-<common-weekly-layout data=data />
+$ const { newsletter, date } = data;
+
+<common-weekly-layout data=data>
+  <@header>
+    <common-header-with-date-block date=date newsletter=newsletter />
+  </@header>
+</common-weekly-layout>
