@@ -18,7 +18,7 @@
   "<common-view-online-block>": {
     "template": "./view-online.marko"
   },
-  "<common-daily-header-block>": {
-    "template": "./daily-header.marko"
+  "<common-header-with-date-block>": {
+    "template": "./header-with-date.marko"
   }
 }
