@@ -79,7 +79,11 @@ $ const buttonStyle = {
         <on-the-move-list-item-block content=content img-styles=imgStyles />
       </if>
 
-      <else-if(sectionName === 'Podcast' || sectionName === 'Podcasts')>
+      <else-if(sectionName === 'From Diverse - At Large' && content.type === 'promotion')>
+        <diverse-at-large-promo-block content=content />
+      </else-if>
+
+      <else-if(sectionName === 'Podcast')>
         <podcast-list-item-block
           content=content
           img-styles=imgStyles
@@ -107,6 +111,16 @@ $ const buttonStyle = {
           content-url=contentUrl
           img-styles=imgStyles
           img-link-styles=imgLinkStyles
+        />
+      </else-if>
+
+      <else-if(sectionName === 'From DiverseEducation.com')>
+        <common-content-no-image-list-item-block
+          content=content
+          content-url=contentUrl
+          with-teaser=withTeaser
+          read-more=readMore
+          with-bullet=true
         />
       </else-if>
 
