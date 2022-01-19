@@ -15,7 +15,7 @@ $ const linkTo = {
               <tbody>
                 <tr>
                   <td align="center" valign="middle" height="38">
-                    <a href=`${linkTo[title]}` target="_blank" style="font-size:15px;color: #000000;text-decoration: none;display: block;font-weight:700;font-family:'Roboto', Arial, sans-serif;text-transform: uppercase;padding: 0 24px;" >&nbsp;${title}&nbsp;</a>
+                    <a href=`${linkTo[title] ? linkTo[title] : '#'}` target="_blank" style="font-size:15px;color: #000000;text-decoration: none;display: block;font-weight:700;font-family:'Roboto', Arial, sans-serif;text-transform: uppercase;padding: 0 24px;" >&nbsp;${title}&nbsp;</a>
                   </td>
                 </tr>
               </tbody>
