@@ -11,11 +11,16 @@ $ const linkTo = {
       <tbody>
         <tr>
           <td align="center" valign="top" >
-            <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3;" >
+            <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3;" >
               <tbody>
                 <tr>
                   <td align="center" valign="middle" height="38">
-                    <a href=`${linkTo[title] ? linkTo[title] : '#'}` target="_blank" style="font-size:15px;color: #000000;text-decoration: none;display: block;font-weight:700;font-family:'Roboto', Arial, sans-serif;text-transform: uppercase;padding: 0 24px;" >&nbsp;${title}&nbsp;</a>
+                    <if(linkTo[title])>
+                      <a href=linkTo[title] target="_blank" style="font-size:15px;color: #000000;text-decoration: none;display: block;font-weight:700;font-family:'Roboto', Arial, sans-serif;text-transform: uppercase;padding: 0 24px;" >&nbsp;${title}&nbsp;</a>
+                    </if>
+                    <else>
+                      <span style="font-size:15px;color: #000000;text-decoration: none;display: block;font-weight:700;font-family:'Roboto', Arial, sans-serif;text-transform: uppercase;padding: 0 24px;" >&nbsp;${title}&nbsp;</span>
+                    </else>
                   </td>
                 </tr>
               </tbody>
