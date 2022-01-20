@@ -42,13 +42,6 @@ $ const nativeX = config.getAsObject("nativeX");
           }
         />
 
-        <!-- Ad Slot 4 -->
-        <common-ad-emailx-block
-          newsletter=newsletter
-          ad-unit=emailX.getAdUnit({ name: 'ad-slot-4', alias: newsletter.alias })
-          date=date
-        />
-
         <!-- Magazine Cover block -->
         <common-content-magazine-cover-block
           date=date
@@ -96,6 +89,14 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
         />
 
+        <!-- Ad Slot 4 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-4', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
         <common-content-list-block
           date=date
           with-header=true
