@@ -19,9 +19,13 @@ $ const { content, withTeaser, voteNow, contentUrl, buttonStyle } = input;
   <common-table-spacer-element height="9" />
   <tr>
     <td align="center" valign="middle">
-      <a href=contentUrl target="_blank">
-        <span style=buttonStyle>&nbsp;Vote Now&nbsp;</span>
-      </a>
+      <table cellpadding="0" align="center" cellspacing="0" style=buttonStyle>
+        <tr>
+          <td align="center" valign="middle">
+            <a href=contentUrl target="_blank" style="text-decoration: none; color: #ffffff;">Vote Now</a>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </if>
