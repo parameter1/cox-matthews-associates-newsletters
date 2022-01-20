@@ -8,10 +8,12 @@ $ const newsletterConfig = config.get(newsletter.alias);
 $ const name = (newsletterConfig.name || newsletter.name);
 $ const dateFormat = defaultValue(input.dateFormat, "MMMM DD, YYYY");
 
+$ const displayDate = date.clone();
+
 $ const dateData = {
   'Diverse Weekly Recap': {
     align: "right",
-    display: `${date.weekday(1).format("MMMM DD")} - ${date.weekday(6).format("MMMM DD, YYYY")}`
+    display: `${displayDate.weekday(1).format("MMMM DD")} - ${displayDate.weekday(6).format("MMMM DD, YYYY")}`
   },
   'Diverse Daily': {
     align: "center",
