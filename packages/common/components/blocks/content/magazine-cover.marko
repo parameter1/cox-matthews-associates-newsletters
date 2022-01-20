@@ -44,7 +44,7 @@ $ const buttonStyle = {
       <table role="presentation" width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
         <tr>
           <td align="center" valign="top" >
-            <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3;" >
+            <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3;" >
               <tr>
                 <td align="center" valign="middle" height="38">
                   <a href="#" target="_blank" style=sectionStyle >From the Magazine</a>
@@ -59,7 +59,7 @@ $ const buttonStyle = {
   </tr>
   <tr>
     <td align="center" valign="top">
-      <table role="presentation" width="25%" border="0" align="left"  cellpadding="0" cellspacing="0">
+      <table role="presentation" width="100%" border="0" align="left"  cellpadding="0" cellspacing="0">
         <tr>
           <td align="left" style="padding-left: 15px">
             <marko-core-obj-value|{ value: coverImage }| obj=latestIssue field="coverImage" as="object">
@@ -72,12 +72,14 @@ $ const buttonStyle = {
               </marko-newsletter-imgix>
             </marko-core-obj-value>
           </td>
-          <table>
-            <from-the-magazine-block date=date newsletter=newsletter />
-          </table>
+          <td valign="top">
+            <table>
+              <from-the-magazine-block date=date newsletter=newsletter />
+            </table>
+          </td>
         </tr>
-        <common-table-spacer-element height=32 />
       </table>
     </td>
   </tr>
+  <common-table-spacer-element height=32 />
 </marko-web-query>
