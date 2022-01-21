@@ -60,6 +60,15 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
         />
 
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="Podcast"
+          newsletter=newsletter
+        />
+
         <!-- Add later when ready for NativeX ads
 
         Advertisement / Promotion block -->
@@ -114,15 +123,6 @@ $ const nativeX = config.getAsObject("nativeX");
           newsletter=newsletter
           ad-unit=emailX.getAdUnit({ name: 'ad-slot-4', alias: newsletter.alias })
           date=date
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          section-name="Podcast"
-          newsletter=newsletter
         />
 
         <common-content-list-block
