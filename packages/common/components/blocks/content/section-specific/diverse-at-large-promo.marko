@@ -1,9 +1,9 @@
 $ const { content} = input;
 
-<if(content.teaser && content.linkText && content.linkUrl)>
+<if(content.linkText && content.linkUrl)>
   <tr>
     <td align="left" valign="middle" style="font-size: 15px;line-height: 23px;color: #202022;font-weight: 400;">
-        &bull;  ${content.name}<br/>${content.teaser} <a href=content.linkUrl>${content.linkText}</a>
+        &bull;  <a href=content.linkUrl>${content.linkText}</a>
     </td>
   </tr>
 </if>
