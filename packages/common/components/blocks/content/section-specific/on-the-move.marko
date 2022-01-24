@@ -1,4 +1,9 @@
-$ const { content, imgStyles } = input;
+import { URLSearchParams } from "url";
+
+$ const { content, imgStyles, readMore, urlParams } = input;
+
+$ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
+$ const contentUrl = `${content.siteContext.url}${queryString}`
 
 <tr>
   <td align="center" valign="top" dir="ltr">
@@ -20,6 +25,10 @@ $ const { content, imgStyles } = input;
                       ${content.teaser}
                     </td>
                   </tr>
+                  <if(readMore)>
+                    <common-table-spacer-element height="9" />
+                    <common-cta-element link-url=contentUrl />
+                  </if>
                 </table>
               </td>
             </tr>
@@ -50,6 +59,10 @@ $ const { content, imgStyles } = input;
           ${content.teaser}
         </td>
       </tr>
+      <if(readMore)>
+        <common-table-spacer-element height="9" />
+        <common-cta-element link-url=contentUrl />
+      </if>
     </table>
   </td>
 </tr>
