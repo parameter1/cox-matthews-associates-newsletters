@@ -25,7 +25,7 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
                       ${content.teaser}
                     </td>
                   </tr>
-                  <if(readMore)>
+                  <if(content.teaser && readMore)>
                     <common-table-spacer-element height="9" />
                     <common-cta-element link-url=contentUrl />
                   </if>
@@ -59,7 +59,7 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
           ${content.teaser}
         </td>
       </tr>
-      <if(readMore)>
+      <if(content.teaser && readMore)>
         <common-table-spacer-element height="9" />
         <common-cta-element link-url=contentUrl />
       </if>
