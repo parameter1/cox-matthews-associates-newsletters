@@ -1,12 +1,16 @@
 $ const { content} = input;
 
-<tr>
-</tr>
 <if(content.teaser && content.linkText && content.linkUrl)>
-  <common-table-spacer-element height="5" />
   <tr>
     <td align="left" valign="middle" style="font-size: 15px;line-height: 23px;color: #202022;font-weight: 400;">
-        &bull;  <a href=content.linkUrl>${content.linkText}</a> ${content.teaser}
+        &bull;  ${content.name}<br/>${content.teaser} <a href=content.linkUrl>${content.linkText}</a>
     </td>
   </tr>
 </if>
+<else-if(content.body)>
+  <tr>
+    <td align="left" valign="middle" style="font-size: 15px;line-height: 23px;color: #202022;font-weight: 400;">
+        $!{content.body}
+    </td>
+  </tr>
+</else-if>
