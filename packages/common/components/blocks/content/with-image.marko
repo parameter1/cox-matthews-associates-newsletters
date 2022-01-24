@@ -22,7 +22,7 @@ $ const { content, readMore, contentUrl, imgStyles, imgLinkStyles } = input;
                       ${content.teaser}
                     </td>
                   </tr>
-                  <if(readMore)>
+                  <if(content.teaser && readMore)>
                     <common-table-spacer-element height="9" />
                     <common-cta-element link-url=contentUrl />
                   </if>
@@ -57,7 +57,7 @@ $ const { content, readMore, contentUrl, imgStyles, imgLinkStyles } = input;
           ${content.teaser}
         </td>
       </tr>
-      <if(readMore)>
+      <if(content.teaser && readMore)>
         <common-table-spacer-element height="9" />
         <common-cta-element link-url=contentUrl />
       </if>
