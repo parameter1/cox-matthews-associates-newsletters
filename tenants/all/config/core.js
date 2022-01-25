@@ -33,7 +33,7 @@ const config = {
   },
   'diverse-weekly-recap': {
     name: 'Diverse Weekly Recap',
-    logoSrc: '/files/base/diverse/all/image/static/weekly-recap-logo.png',
+    logoSrc: '/files/base/diverse/all/image/static/WeeklyRecap.jpeg',
     ...brands.diverse,
   },
 };
