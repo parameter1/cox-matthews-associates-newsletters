@@ -1,19 +1,34 @@
 import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
 
-$ const { config } = out.global
+$ const { website, config } = out.global
 
 $ const { newsletter, date } = input;
 
 $ const newsletterConfig = config.get(newsletter.alias);
 $ const name = (newsletterConfig.name || newsletter.name);
-$ const dateFormat = defaultValue(input.dateFormat, "MMMM DD, YYYY");
+$ const logoSrc = newsletterConfig.logoSrc;
 
+$ const alt = defaultValue(input.alt, newsletter.name);
+
+$ const logoStyles = {
+  "border": "0",
+  "font-size": "0",
+  "line-height": "0",
+  "width": "600px"
+}
+
+$ const linkStyles = {
+  "display": "block",
+  "font-size": "0",
+  "line-height": "0",
+}
+$ const dateFormat = defaultValue(input.dateFormat, "MMMM DD, YYYY");
 $ const displayDate = date.clone();
 
 $ const dateData = {
   'Diverse Weekly Recap': {
-    align: "right",
-    display: `${displayDate.weekday(1).format("MMMM DD")} - ${displayDate.weekday(6).format("MMMM DD, YYYY")}`
+    align: "center",
+    display: `${displayDate.weekday(1).format("MMMM DD")} - ${displayDate.weekday(5).format("MMMM DD, YYYY")}`
   },
   'Diverse Daily': {
     align: "center",
@@ -30,7 +45,12 @@ $ const dateData = {
           <table role="presentation" width="610" border="0" cellspacing="0" cellpadding="0" class="wrap003">
             <tr>
               <td align="center" valign="center">
-                <common-logo-element newsletter=newsletter />
+                <marko-newsletter-imgix
+                  src=logoSrc
+                  alt=alt
+                  attrs={ border: "0", style: logoStyles }>
+                    <@link href=website.get("origin") attrs={ style: linkStyles } target="_blank" />
+                </marko-newsletter-imgix>
               </td>
             </tr>
             <common-table-spacer-element height="20" />

@@ -20,12 +20,12 @@ module.exports = {
   },
   health: {
     brandName: 'Diverse Health',
-    logoSrc: '/files/base/diverse/all/image/static/dh-logo.png',
+    logoSrc: '/files/base/diverse/all/image/static/health.jpeg',
     subscribeLink: '',
   },
   hiring: {
     brandName: 'Diverse Hiring',
-    logoSrc: '/files/base/diverse/all/image/static/diverse-hiring-logo.png',
+    logoSrc: '/files/base/diverse/all/image/static/diverseHiring.jpeg',
     subscribeLink: '',
   },
 };
