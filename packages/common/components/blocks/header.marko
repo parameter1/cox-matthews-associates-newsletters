@@ -34,14 +34,13 @@ $ const linkStyles = {
               <td align="center" valign="center">
                 <marko-newsletter-imgix
                   src=logoSrc
-                  options={ w: 600 }
                   alt=alt
-                  attrs={ border: "0", style: logoStyles }>
-                    <@link href=website.get("origin") attrs={ style: linkStyles } target="_blank" />
+                  options= { w: 600, h: 140 }
+                >
+                  <@link href=website.get("origin") attrs={ style: linkStyles } target="_blank" />
                 </marko-newsletter-imgix>
               </td>
             </tr>
-            <common-table-spacer-element height="20" />
           </table>
         </td>
       </tr>
