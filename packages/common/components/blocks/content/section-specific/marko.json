@@ -8,9 +8,6 @@
   "<poll-list-item-block>": {
     "template": "./poll.marko"
   },
-  "<diverse-at-large-promo-block>": {
-    "template": "./diverse-at-large-promo.marko"
-  },
   "<from-the-magazine-block>": {
     "template": "./from-the-magazine.marko"
   }
