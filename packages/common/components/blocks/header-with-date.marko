@@ -10,12 +10,6 @@ $ const logoSrc = newsletterConfig.logoSrc;
 
 $ const alt = defaultValue(input.alt, newsletter.name);
 
-$ const logoStyles = {
-  "border": "0",
-  "font-size": "0",
-  "line-height": "0",
-}
-
 $ const linkStyles = {
   "display": "block",
   "font-size": "0",
@@ -53,9 +47,9 @@ $ const dateData = {
                 </marko-newsletter-imgix>
               </td>
             </tr>
-            <common-table-spacer-element height="20" />
+            <common-table-spacer-element height="9" />
             <tr>
-              <td align=`${dateData[name].align}` valign="center" style="font-weight: 700">
+              <td align=`${dateData[name].align}` valign="center" style="font-size: 18px; font-weight: 700">
                   ${dateData[name].display}
               </td>
             </tr>

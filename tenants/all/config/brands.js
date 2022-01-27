@@ -1,7 +1,6 @@
 module.exports = {
   diverse: {
     brandName: 'Diverse',
-    subscribeLink: '',
     socialMedia: {
       imagePath: '/files/base/diverse/all/image/static/newsletter/',
       links: [
@@ -16,16 +15,13 @@ module.exports = {
   ccnews: {
     brandName: 'CCNews',
     logoSrc: '/files/base/diverse/all/image/static/CCNews.jpeg',
-    subscribeLink: '',
   },
   health: {
     brandName: 'Diverse Health',
     logoSrc: '/files/base/diverse/all/image/static/health.jpeg',
-    subscribeLink: '',
   },
   hiring: {
     brandName: 'Diverse Hiring',
     logoSrc: '/files/base/diverse/all/image/static/diverseHiring.jpeg',
-    subscribeLink: '',
   },
 };
