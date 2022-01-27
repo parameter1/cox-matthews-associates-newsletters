@@ -34,14 +34,14 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
             </tr>
           </table>
         </td>
-        <td align="right" valign="top" width="150" class="wdt">
+        <td align="right" valign="top" width="200" class="wdt">
           <marko-core-obj-value|{ value: image }| obj=content field="primaryImage" as="object">
             <marko-newsletter-imgix
               src=image.src
               alt=image.alt
-              options={ w: 150, h: 150 }
+              options={ w: 400, h: 266, fit: "crop", auto: "format,compress" }
               class="img_resize2"
-              attrs={ style: imgStyles }
+              attrs={ border: 0, width: 200, height: 133, style: imgStyles }
             >
             </marko-newsletter-imgix>
           </marko-core-obj-value>
