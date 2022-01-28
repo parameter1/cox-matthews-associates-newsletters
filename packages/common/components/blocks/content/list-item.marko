@@ -76,11 +76,20 @@ $ const buttonStyle = {
       <common-table-spacer-element height="6" />
 
       <if(sectionName === 'On the Move')>
-        <on-the-move-list-item-block content=content img-styles=imgStyles read-more=readMore />
+        <on-the-move-list-item-block
+          content=content img-styles=imgStyles
+          img-link-styles=imgLinkStyles
+          read-more=readMore />
       </if>
 
       <else-if(sectionName === 'From Diverse - At Large' && content.type === 'promotion')>
-        <diverse-at-large-promo-block content=content />
+        <diverse-at-large-promo-block
+          content=content
+          img-styles=imgStyles
+          img-link-styles=imgLinkStyles
+          read-more=readMore
+          content-url=contentUrl
+        />
       </else-if>
 
       <else-if(sectionName === 'Podcast')>
