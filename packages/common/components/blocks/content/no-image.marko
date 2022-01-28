@@ -1,9 +1,9 @@
-$ const { content, contentUrl, withTeaser, readMore, withBullet } = input;
+$ const { content, contentUrl, withTeaser, readMore } = input;
 
 <tr>
   <td align="left" valign="top">
     <a style="font-size: 22px;line-height: 28px;color: #436daa;font-weight: 700;text-decoration: none;" href=contentUrl>
-      <if(withBullet)>&bull;  </if>${content.name}
+      ${content.name}
     </a>
   </td>
 </tr>
