@@ -83,7 +83,13 @@ $ const buttonStyle = {
       </if>
 
       <else-if(sectionName === 'From Diverse - At Large' && content.type === 'promotion')>
-        <diverse-at-large-promo-block content=content />
+        <diverse-at-large-promo-block
+          content=content
+          img-styles=imgStyles
+          img-link-styles=imgLinkStyles
+          read-more=readMore
+          content-url=contentUrl
+        />
       </else-if>
 
       <else-if(sectionName === 'Podcast')>
