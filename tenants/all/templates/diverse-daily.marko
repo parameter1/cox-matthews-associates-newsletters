@@ -1,6 +1,9 @@
 $ const { newsletter, date } = data;
 
 <common-daily-layout data=data>
+  <@viewOnline>
+    <common-hide-view-online-block />
+  </@viewOnline>
   <@header>
     <common-header-with-date-block date=date newsletter=newsletter />
   </@header>
