@@ -20,5 +20,8 @@
   },
   "<common-header-with-date-block>": {
     "template": "./header-with-date.marko"
+  },
+  "<common-hide-view-online-block>": {
+    "template": "./hide-view-online.marko"
   }
 }
