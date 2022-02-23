@@ -23,11 +23,6 @@ $ const queryParams = {
   queryFragment,
 };
 
-$ const adSlotNames = {
-  '1': { name: 'ad-slot-2'},
-  '3': { name: 'ad-slot-3'},
-};
-
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
   <if(nodes.length)>
     <if(withHeader)>
