@@ -4,6 +4,7 @@ import queryFragment from "@cox-matthews-associates/package-common/graphql/fragm
 
 $ const { sectionName, date, newsletter } = input;
 
+$ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withHeader = defaultValue(input.withHeader, false);
 $ const withSection = defaultValue(input.withSection, true);
@@ -22,20 +23,12 @@ $ const queryParams = {
   queryFragment,
 };
 
-$ const adSlotNames = {
-  '1': { name: 'ad-slot-2'},
-  '3': { name: 'ad-slot-3'},
-};
-
-$ const isMainDiverseHiring = (sectionName === 'Main' && newsletter.name === 'Diverse Hiring');
-
 <marko-web-query|{ nodes }| name="newsletter-scheduled-content" collapsible=false params=queryParams>
   <if(nodes.length)>
     <if(withHeader)>
       <common-list-header-element title=sectionName />
     </if>
-    <for|content, index| of=nodes>
-      $ const withImage = (isMainDiverseHiring && index === 0) ? true : false || defaultValue(input.withImage, false);
+    <for|content| of=nodes>
       <common-content-list-item-block
         content=content
         with-section=withSection
@@ -47,14 +40,6 @@ $ const isMainDiverseHiring = (sectionName === 'Main' && newsletter.name === 'Di
         section-name=sectionName
         read-more=readMore
       />
-    <if(( adSlotNames[index] && adParams ))>
-    $ const { name } = adSlotNames[index]
-      <common-ad-emailx-block
-        newsletter=adParams.newsletter
-        ad-unit=adParams.emailX.getAdUnit({ name, alias: newsletter.alias })
-        date=adParams.date
-      />
-    </if>
     </for>
   </if>
 </marko-web-query>

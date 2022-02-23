@@ -34,11 +34,42 @@ $ const nativeX = config.getAsObject("nativeX");
           with-header=true
           section-name="Current News"
           newsletter=newsletter
-          ad-params={
-            newsletter,
-            emailX,
-            date
-          }
+          limit=2
+        />
+
+        <!-- Ad Slot 2 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          with-header=false
+          section-name="Current News"
+          newsletter=newsletter
+          skip=2
+          limit=2
+        />
+
+        <!-- Ad Slot 3 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-3', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          with-header=false
+          section-name="Current News"
+          newsletter=newsletter
+          skip=4
         />
 
         <!-- Content list block -->
