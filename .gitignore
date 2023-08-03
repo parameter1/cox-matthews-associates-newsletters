@@ -105,3 +105,4 @@ dist
 
 *.marko.js
 .DS_Store
+.bash_history
