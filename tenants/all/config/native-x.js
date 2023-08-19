@@ -1,5 +1,5 @@
 module.exports = {
-  uri: 'https://diverse.native-x.parameter1.com',
+  uri: 'https://diverse.native-x.parameter1.com/email-placement',
   placements: {
     'ccnews-now': {
       'native-slot-1': '617190722f211d0001c095dc',
