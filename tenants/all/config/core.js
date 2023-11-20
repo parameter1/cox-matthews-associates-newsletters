@@ -17,7 +17,7 @@ const config = {
   },
   'diverse-daily': {
     name: 'Diverse Daily',
-    logoSrc: '/files/base/diverse/all/image/static/diverse-education-logo.png',
+    logoSrc: '/files/base/diverse/all/image/static/Diverse-Logo-2023-BlueWithTag.png',
     subscribeLink: 'https://cma.dragonforms.com/DiverseDaily',
     ...brands.diverse,
   },
@@ -38,7 +38,7 @@ const config = {
   },
   'diverse-weekly-recap': {
     name: 'Diverse Weekly Recap',
-    logoSrc: '/files/base/diverse/all/image/static/WeeklyRecap.jpeg',
+    logoSrc: '/files/base/diverse/all/image/static/WeeklyRecap.png',
     ...brands.diverse,
   },
 };

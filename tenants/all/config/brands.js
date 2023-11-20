@@ -22,6 +22,6 @@ module.exports = {
   },
   hiring: {
     brandName: 'Diverse Hiring',
-    logoSrc: '/files/base/diverse/all/image/static/diverseHiring.jpeg',
+    logoSrc: '/files/base/diverse/all/image/static/Hiring.png',
   },
 };
