@@ -10,7 +10,7 @@ $ const withSection = defaultValue(input.withSection, true);
 $ const voteNow = defaultValue(input.voteNow, false);
 $ const readMore = defaultValue(input.readMore, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
-$ const noLogo = defaultValue(input.noLogo, false);
+$ const withLogo = defaultValue(input.withLogo, true);
 
 $ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
 $ const contentUrl = `${content.siteContext.url}${queryString}`
@@ -101,7 +101,7 @@ $ const buttonStyle = {
           read-more=readMore
           content-url=contentUrl
           vote-now=voteNow
-          no-logo=noLogo
+          wtih-logo=withLogo
         />
       </else-if>
 
