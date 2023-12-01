@@ -12,6 +12,7 @@ $ const voteNow = defaultValue(input.voteNow, false);
 $ const readMore = defaultValue(input.readMore, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
+$ const withLogo = defaultValue(input.withLogo, true);
 $ const adParams = input.adParams;
 
 $ const queryParams = {
@@ -39,6 +40,7 @@ $ const queryParams = {
         with-teaser=withTeaser
         section-name=sectionName
         read-more=readMore
+        with-logo=withLogo
       />
     </for>
   </if>
