@@ -1,4 +1,7 @@
-$ const { newsletter, content, imgStyles, imgLinkStyles, readMore, contentUrl, voteNow, withLogo } = input;
+import defaultValue from "@parameter1/base-cms-marko-core/utils/default-value";
+
+$ const { newsletter, content, imgStyles, imgLinkStyles, readMore, contentUrl, voteNow } = input;
+$ const withLogo = defaultValue(input.withLogo, true);
 
 <if(withLogo === true)>
   <tr>
@@ -64,7 +67,8 @@ $ const { newsletter, content, imgStyles, imgLinkStyles, readMore, contentUrl, v
     </td>
   </tr>
 </if>
-<else>
+
+<if(withLogo === false)>
   <tr>
     <td align="center" valign="top" dir="ltr">
       <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -100,4 +104,4 @@ $ const { newsletter, content, imgStyles, imgLinkStyles, readMore, contentUrl, v
       </table>
     </td>
   </tr>
-</else>
+</if>
