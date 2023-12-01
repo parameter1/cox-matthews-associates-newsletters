@@ -1,0 +1,114 @@
+import { get } from "@parameter1/base-cms-object-path";
+import { parseBooleanHeader } from "@parameter1/base-cms-utils";
+import queryFragment from "@cox-matthews-associates/package-common/graphql/fragments/content-list";
+
+$ const { website, config, req } = out.global;
+$ const { newsletter, date } = input.data;
+
+$ const emailX = config.get("emailX");
+$ const nativeX = config.getAsObject("nativeX");
+
+<marko-newsletter-root
+  title=newsletter.name
+  description=newsletter.description
+  date=date
+>
+  <@head>
+    <common-head-block />
+  </@head>
+  <@body style="padding:0; margin:0;font-family: 'Roboto', Arial, sans-serif; -webkit-text-size-adjust:100%;">
+    <common-body-wrapper-block newsletter=newsletter date=date footer=input.footer viewOnline=input.viewOnline>
+      <@body>
+
+        <!-- Ad Slot 1 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-1', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          with-header=true
+          section-name="Current News"
+          newsletter=newsletter
+          limit=2
+        />
+
+        <!-- Ad Slot 2 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-2', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          with-header=false
+          section-name="Current News"
+          newsletter=newsletter
+          skip=2
+          limit=2
+        />
+
+        <!-- Ad Slot 3 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-3', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-section=false
+          with-header=false
+          section-name="Current News"
+          newsletter=newsletter
+          skip=4
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="Other News"
+          with-teaser=false
+          newsletter=newsletter
+        />
+
+        <!-- Add later when ready for NativeX ads
+
+        Advertisement / Promotion block -->
+        <!-- <common-ad-wrapper-block
+          date=date
+          newsletter=newsletter
+          promotion-component="advertisement-block"
+          placement-id=get(nativeX, `placements.${newsletter.alias}.native-slot-1`)
+        /> -->
+
+        <!-- Ad Slot 4 -->
+        <common-ad-emailx-block
+          newsletter=newsletter
+          ad-unit=emailX.getAdUnit({ name: 'ad-slot-4', alias: newsletter.alias })
+          date=date
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="Featured Jobs"
+          newsletter=newsletter
+        />
+
+      </@body>
+    </common-body-wrapper-block>
+  </@body>
+</marko-newsletter-root>
