@@ -17,7 +17,7 @@ const config = {
   },
   'diverse-daily': {
     name: 'Diverse Daily',
-    logoSrc: '/files/base/diverse/all/image/static/Diverse-Logo-2023-BlueWithTag.png',
+    logoSrc: '/files/base/diverse/all/image/static/DIV-40th-Anniversary.png',
     subscribeLink: 'https://cma.dragonforms.com/DiverseDaily',
     ...brands.diverse,
   },
