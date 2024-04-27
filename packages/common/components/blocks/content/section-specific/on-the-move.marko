@@ -1,9 +1,20 @@
+import { get, getAsObject } from "@parameter1/base-cms-object-path";
 import { URLSearchParams } from "url";
 
 $ const { content, imgStyles, readMore, urlParams, imgLinkStyles } = input;
 
+$ const creativeId = get(input, "mindfulCreativeId");
+$ const tenant = get(input, "mindfulTenant");
 $ const queryString = (urlParams && content.type !== 'promotion') ? `?${new URLSearchParams(urlParams)}` : "";
 $ const contentUrl = `${content.siteContext.url}${queryString}`
+
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
+
+$ const imgLinkAttrs = { style: imgLinkStyles, ...linkAttrs };
 
 <tr>
   <td align="center" valign="top" dir="ltr">
@@ -27,7 +38,7 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
                   </tr>
                   <if(content.teaser && readMore)>
                     <common-table-spacer-element height="9" />
-                    <common-cta-element link-url=contentUrl />
+                    <common-cta-element link-url=contentUrl link-attrs=linkAttrs />
                   </if>
                 </table>
               </td>
@@ -43,7 +54,7 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
               class="img_resize2"
               attrs={ border: 0, width: 200, height: 133, style: imgStyles }
             >
-              <@link href=contentUrl target="_blank" attrs={ style: imgLinkStyles } />
+              <@link href=contentUrl target="_blank" attrs=imgLinkAttrs />
             </marko-newsletter-imgix>
           </marko-core-obj-value>
         </td>
@@ -62,7 +73,7 @@ $ const contentUrl = `${content.siteContext.url}${queryString}`
       </tr>
       <if(content.teaser && readMore)>
         <common-table-spacer-element height="9" />
-        <common-cta-element link-url=contentUrl />
+        <common-cta-element link-url=contentUrl link-attrs=linkAttrs />
       </if>
     </table>
   </td>

@@ -1,8 +1,18 @@
+import { get, getAsObject } from "@parameter1/base-cms-object-path";
+
 $ const { content, withTeaser, voteNow, contentUrl, buttonStyle } = input;
+$ const creativeId = get(input, "mindfulCreativeId");
+$ const tenant = get(input, "mindfulTenant");
+
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
 
 <tr>
   <td align="center" valign="top">
-    <a style="font-size: 22px;line-height: 28px;color: #0087ca;font-weight: 700;text-decoration: none;" href=contentUrl>
+    <a style="font-size: 22px;line-height: 28px;color: #0087ca;font-weight: 700;text-decoration: none;" href=contentUrl ...linkAttrs>
       ${content.name}
     </a>
   </td>
@@ -22,7 +32,7 @@ $ const { content, withTeaser, voteNow, contentUrl, buttonStyle } = input;
       <table cellpadding="0" align="center" cellspacing="0" style=buttonStyle>
         <tr>
           <td align="center" valign="middle">
-            <a href=contentUrl target="_blank" style="text-decoration: none; color: #ffffff;">Vote Now</a>
+            <a href=contentUrl target="_blank" style="text-decoration: none; color: #ffffff;" ...linkAttrs>Vote Now</a>
           </td>
         </tr>
       </table>

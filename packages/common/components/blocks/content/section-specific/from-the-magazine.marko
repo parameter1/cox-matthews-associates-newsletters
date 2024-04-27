@@ -1,6 +1,15 @@
+import { get, getAsObject } from "@parameter1/base-cms-object-path";
 import queryFragment from "@cox-matthews-associates/package-common/graphql/fragments/content-list";
 
 $ const { date, newsletter } = input;
+$ const creativeId = get(input, "mindfulCreativeId");
+$ const tenant = get(input, "mindfulTenant");
+
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
 
 $ const queryParams = {
   date: date.valueOf(),
@@ -14,7 +23,7 @@ $ const queryParams = {
     <for|content, index| of=nodes>
       <tr>
         <td align="left" valign="top" style="padding-left: 20px; padding-right: 15px">
-          <a style="font-size: 22px;line-height: 28px;color: #0087ca;font-weight: 700;text-decoration: none;" href=content.siteContext.url>
+          <a style="font-size: 22px;line-height: 28px;color: #0087ca;font-weight: 700;text-decoration: none;" href=content.siteContext.url ...linkAttrs>
             ${content.name}
           </a>
         </td>
