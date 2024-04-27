@@ -4,6 +4,8 @@ import { URLSearchParams } from "url";
 
 $ const { content, urlParams, sectionName } = input;
 
+$ const mindfulCreativeId = get(input, "mindfulCreativeId");
+$ const mindfulTenant = get(input, "mindfulTenant");
 $ const withImage = defaultValue(input.withImage, false);
 $ const imagePosition = defaultValue(input.imagePosition, 'right');
 $ const withSection = defaultValue(input.withSection, true);
@@ -80,7 +82,10 @@ $ const buttonStyle = {
         <on-the-move-list-item-block
           content=content img-styles=imgStyles
           img-link-styles=imgLinkStyles
-          read-more=readMore />
+          read-more=readMore
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
+        />
       </if>
 
       <else-if(sectionName === 'From Diverse - At Large' && content.type === 'promotion')>
@@ -90,6 +95,8 @@ $ const buttonStyle = {
           img-link-styles=imgLinkStyles
           read-more=readMore
           content-url=contentUrl
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else-if>
 
@@ -102,6 +109,8 @@ $ const buttonStyle = {
           content-url=contentUrl
           vote-now=voteNow
           wtih-logo=withLogo
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else-if>
 
@@ -112,6 +121,8 @@ $ const buttonStyle = {
           vote-now=voteNow
           content-url=contentUrl
           button-style=buttonStyle
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else-if>
 
@@ -122,6 +133,8 @@ $ const buttonStyle = {
           content-url=contentUrl
           img-styles=imgStyles
           img-link-styles=imgLinkStyles
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else-if>
 
@@ -131,6 +144,8 @@ $ const buttonStyle = {
           content-url=contentUrl
           with-teaser=withTeaser
           read-more=readMore
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else-if>
 
@@ -140,6 +155,8 @@ $ const buttonStyle = {
           content-url=contentUrl
           with-teaser=withTeaser
           read-more=readMore
+          mindful-creative-id=mindfulCreativeId
+          mindful-tenant=mindfulTenant
         />
       </else>
 
