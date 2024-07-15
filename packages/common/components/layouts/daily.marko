@@ -54,7 +54,68 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Featured Stories"
           newsletter=newsletter
           skip=2
-          limit=2
+          limit=1
+        />
+
+        <tr>
+          <td align="center" valign="top">
+            <table role="presentation" width="100%" border="0" align="center"  cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top" >
+                    <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="background: #eff1f3;" >
+                      <tbody>
+                        <tr>
+                          <td align="center" valign="middle" height="38">
+                            <marko-newsletter-imgix
+                              src='/files/base/diverse/all/image/static/newsletter/top-articles.png'
+                              class="img_resize2"
+                            >
+                            </marko-newsletter-imgix>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <common-table-spacer-element height="24" />
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <common-content-list-block
+          date=date
+          with-header=false
+          with-section=false
+          section-name="Most Read Article on e-newsletter"
+          with-image=false
+          newsletter=newsletter
+          read-more=false
+          limit=1
+        />
+
+        <common-content-list-block
+          date=date
+          with-header=false
+          with-section=false
+          section-name="Most Read Article from the website"
+          with-image=false
+          newsletter=newsletter
+          read-more=false
+          limit=1
+        />
+
+        <!-- Content list block -->
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          with-teaser=true
+          section-name="Featured Stories"
+          newsletter=newsletter
+          skip=3
+          limit=1
         />
 
         <!-- Ad Slot 3 -->
