@@ -1,6 +1,6 @@
 {
   "name": "@cox-matthews-associates/all",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "author": "Jessica Wade <jessica.wade@parameter1.com>",
   "repository": "https://github.com/parameter1/cox-matthews-associates-newsletters/tree/master/tenants/all",
   "license": "MIT",
@@ -22,13 +22,13 @@
     "win32"
   ],
   "dependencies": {
-    "@cox-matthews-associates/package-common": "^1.0.4",
-    "@parameter1/base-cms-marko-core": "^4.36.0",
-    "@parameter1/base-cms-marko-newsletters": "^4.36.0",
-    "@parameter1/base-cms-marko-newsletters-email-x": "^4.5.12",
-    "@parameter1/base-cms-marko-newsletters-native-x": "^4.34.7",
-    "@parameter1/base-cms-newsletter-cli": "^4.5.12",
-    "@parameter1/base-cms-object-path": "^4.5.12",
+    "@cox-matthews-associates/package-common": "^1.1.0",
+    "@parameter1/base-cms-marko-core": "^4.54.2",
+    "@parameter1/base-cms-marko-newsletters": "^4.55.0",
+    "@parameter1/base-cms-marko-newsletters-email-x": "^4.50.0",
+    "@parameter1/base-cms-marko-newsletters-native-x": "^4.52.0",
+    "@parameter1/base-cms-newsletter-cli": "^4.40.3",
+    "@parameter1/base-cms-object-path": "^4.40.3",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "newrelic": "^9.10.1"

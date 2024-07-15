@@ -1,5 +1,5 @@
 module.exports = {
-  uri: 'https://diverse.native-x.parameter1.com/email-placement',
+  uri: 'https://delivery.mindfulcms.com/cma/default/compat/native-email/email-placement',
   placements: {
     'ccnews-now': {
       'native-slot-1': '617190722f211d0001c095dc',
