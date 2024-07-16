@@ -54,7 +54,6 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Featured Stories"
           newsletter=newsletter
           skip=2
-          limit=2
         />
 
         <tr>
@@ -86,10 +85,11 @@ $ const nativeX = config.getAsObject("nativeX");
 
         <common-content-list-block
           date=date
-          with-header=false
+          with-header=true
           with-section=false
           section-name="Most Read Article on e-newsletter"
           with-image=false
+          with-teaser=false
           newsletter=newsletter
           read-more=false
           limit=1
@@ -97,10 +97,11 @@ $ const nativeX = config.getAsObject("nativeX");
 
         <common-content-list-block
           date=date
-          with-header=false
+          with-header=true
           with-section=false
           section-name="Most Read Article from the website"
           with-image=false
+          with-teaser=false
           newsletter=newsletter
           read-more=false
           limit=1
