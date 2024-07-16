@@ -77,7 +77,6 @@ $ const nativeX = config.getAsObject("nativeX");
                     </table>
                   </td>
                 </tr>
-                <common-table-spacer-element height="24" />
               </tbody>
             </table>
           </td>
@@ -85,7 +84,7 @@ $ const nativeX = config.getAsObject("nativeX");
 
         <common-content-list-block
           date=date
-          with-header=true
+          with-subheader=true
           with-section=false
           section-name="Most Read Article on e-newsletter"
           with-image=false
@@ -97,7 +96,7 @@ $ const nativeX = config.getAsObject("nativeX");
 
         <common-content-list-block
           date=date
-          with-header=true
+          with-subheader=true
           with-section=false
           section-name="Most Read Article from the website"
           with-image=false
@@ -106,6 +105,8 @@ $ const nativeX = config.getAsObject("nativeX");
           read-more=false
           limit=1
         />
+
+        <common-table-spacer-element height="25" />
 
         <!-- Ad Slot 3 -->
         <common-ad-emailx-block

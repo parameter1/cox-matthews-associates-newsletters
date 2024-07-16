@@ -13,6 +13,7 @@ $ const readMore = defaultValue(input.readMore, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
 $ const withLogo = defaultValue(input.withLogo, true);
+$ const withSubheader = defaultValue(input.withSubheader, false);
 $ const adParams = input.adParams;
 
 $ const queryParams = {
@@ -28,6 +29,9 @@ $ const queryParams = {
   <if(nodes.length)>
     <if(withHeader)>
       <common-list-header-element title=sectionName />
+    </if>
+    <if(withSubheader)>
+      <common-list-subheader-element title=sectionName />
     </if>
     <for|content| of=nodes>
       <common-content-list-item-block
