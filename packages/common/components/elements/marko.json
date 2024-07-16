@@ -33,5 +33,8 @@
   },
   "<common-table-spacer-element>": {
     "template": "./table-spacer.marko"
+  },
+  "<common-list-subheader-element>": {
+    "template": "./list-subheader.marko"
   }
 }
