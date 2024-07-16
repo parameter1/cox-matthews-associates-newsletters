@@ -54,7 +54,7 @@ $ const nativeX = config.getAsObject("nativeX");
           section-name="Featured Stories"
           newsletter=newsletter
           skip=2
-          limit=1
+          limit=2
         />
 
         <tr>
@@ -106,34 +106,11 @@ $ const nativeX = config.getAsObject("nativeX");
           limit=1
         />
 
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=true
-          with-section=false
-          with-teaser=true
-          section-name="Featured Stories"
-          newsletter=newsletter
-          skip=3
-          limit=1
-        />
-
         <!-- Ad Slot 3 -->
         <common-ad-emailx-block
           newsletter=newsletter
           ad-unit=emailX.getAdUnit({ name: 'ad-slot-3', alias: newsletter.alias })
           date=date
-        />
-
-        <!-- Content list block -->
-        <common-content-list-block
-          date=date
-          with-header=false
-          with-section=false
-          with-teaser=true
-          section-name="Featured Stories"
-          newsletter=newsletter
-          skip=4
         />
 
         <!-- Content list block -->
