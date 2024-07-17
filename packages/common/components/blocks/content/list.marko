@@ -34,7 +34,7 @@ $ const queryParams = {
     <if(withSubheader)>
       $ const dayOfWeek = new Date(date).getDay();
       $ const yesterdayOfWeek = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
-      $ const sectionNameWithDate = sectionName.match(/most read article on e-newsletter/i) ? `Most read article in ${weekday[yesterdayOfWeek]}'s e-newsletter` : sectionName
+      $ const sectionNameWithDate = sectionName.match(/most read article on e-newsletter/i) ? `Most read article in ${weekday[yesterdayOfWeek]}'s newsletter` : sectionName
       <common-list-subheader-element title=sectionNameWithDate />
     </if>
     <for|content| of=nodes>
