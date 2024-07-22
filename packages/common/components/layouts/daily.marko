@@ -86,9 +86,21 @@ $ const nativeX = config.getAsObject("nativeX");
 
         <common-content-list-block
           date=date
-          with-subheader=true
+          with-header=true
           with-section=false
-          section-name="Most Read Article on e-newsletter"
+          section-name="Most Read Article in Monday's newsletter"
+          with-image=false
+          with-teaser=false
+          newsletter=newsletter
+          read-more=false
+          limit=1
+        />
+
+        <common-content-list-block
+          date=date
+          with-header=true
+          with-section=false
+          section-name="Most Read Article in Wednesday's newsletter"
           with-image=false
           with-teaser=false
           newsletter=newsletter
