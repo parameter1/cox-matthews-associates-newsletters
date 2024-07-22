@@ -13,9 +13,7 @@ $ const readMore = defaultValue(input.readMore, false);
 $ const urlParams = defaultValue(input.urlParams, false);
 $ const withTeaser = defaultValue(input.withTeaser, true);
 $ const withLogo = defaultValue(input.withLogo, true);
-$ const withSubheader = defaultValue(input.withSubheader, false);
 $ const adParams = input.adParams;
-$ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 $ const queryParams = {
   date: date.valueOf(),
@@ -30,12 +28,6 @@ $ const queryParams = {
   <if(nodes.length)>
     <if(withHeader)>
       <common-list-header-element title=sectionName />
-    </if>
-    <if(withSubheader)>
-      $ const dayOfWeek = new Date(date).getDay();
-      $ const yesterdayOfWeek = dayOfWeek === 1 ? 5 : dayOfWeek - 1;
-      $ const sectionNameWithDate = sectionName.match(/most read article on e-newsletter/i) ? `Most read article in ${weekday[yesterdayOfWeek]}'s newsletter` : sectionName
-      <common-list-subheader-element title=sectionNameWithDate />
     </if>
     <for|content| of=nodes>
       <common-content-list-item-block
