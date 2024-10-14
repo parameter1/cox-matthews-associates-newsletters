@@ -15,6 +15,7 @@ $ const withTeaser = defaultValue(input.withTeaser, true);
 $ const withLogo = defaultValue(input.withLogo, true);
 $ const forDailySend = defaultValue(input.forDailySend, false);
 $ const forTwoDaySend = defaultValue(input.forTwoDaySend, false);
+$ const forTwoDaySendWebsite = defaultValue(input.forTwoDaySendWebsite, false);
 $ const withSubheader = defaultValue(input.withSubheader, false);
 $ const adParams = input.adParams;
 $ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -43,6 +44,12 @@ $ const queryParams = {
       $ const dayOfWeek = new Date(date).getDay();
       $ const yesterdayOfWeek = dayOfWeek === 1 ? 3 : dayOfWeek - 2;
       $ const sectionNameWithDate = sectionName.match(/most read article on e-newsletter/i) ? `Most read article in ${weekday[yesterdayOfWeek]}'s newsletter` : sectionName
+      <common-list-subheader-element title=sectionNameWithDate />
+    </if>
+    <if(forTwoDaySendWebsite)>
+      $ const dayOfWeek = new Date(date).getDay();
+      $ const yesterdayOfWeek = dayOfWeek === 1 ? 3 : dayOfWeek - 2;
+      $ const sectionNameWithDate = sectionName.match(/most read article from the website/i) ? `Most read article from the website on ${weekday[yesterdayOfWeek]}` : sectionName
       <common-list-subheader-element title=sectionNameWithDate />
     </if>
     <if(withSubheader)>
