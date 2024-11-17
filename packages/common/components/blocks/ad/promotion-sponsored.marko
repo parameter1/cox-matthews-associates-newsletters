@@ -18,6 +18,14 @@ $ const imgLinkStyles = {
   "line-height": 0,
 }
 
+$ const linkAttrs = {
+  ...(getAsObject(input, "link.attrs")),
+  ...(creativeId && { 'data-mindful-creative-id': creativeId }),
+  ...(tenant && { 'data-mindful-tenant': tenant }),
+};
+
+$ const imgLinkAttrs = { style: imgLinkStyles, ...linkAttrs };
+
 <tr>
   <td align="center" valign="top">
     <table role="presentation" width="610" border="0" align="center" cellpadding="0" cellspacing="0" class="wrap003">
@@ -49,7 +57,7 @@ $ const imgLinkStyles = {
                                         options={ w: 180, h: 80, fit: "fill", auto: "format,compress" }
                                         attrs={ border: 0, width: 90, style: imgStyles }
                                       >
-                                        <@link href=content.siteContext.url target="_blank" attrs={ style: imgLinkStyles } />
+                                        <@link href=content.siteContext.url target="_blank" attrs=imgLinkAttrs />
                                       </marko-newsletter-imgix>
                                     </marko-core-obj-value>
                                   </td>
@@ -59,7 +67,7 @@ $ const imgLinkStyles = {
                                         <td align="left" valign="top" style="font-size:16px;line-height:19px;color:#202022;font-weight:700;">${company.name}</td>
                                       </tr>
                                       <tr>
-                                        <td align="left" valign="top" style="font-size:16px;line-height:22px;color:#202022;font-weight:400;">${content.teaser}</td>
+                                        <td align="left" valign="top" style="font-size:16px;line-height:22px;color:#202022;font-weight:400;" class="teaser">$!{content.teaser}</td>
                                       </tr>
                                     </table>
                                   </td>
@@ -76,7 +84,7 @@ $ const imgLinkStyles = {
               <common-table-spacer-element height="6" />
               <tr>
                 <td align="left" valign="top" style="font-size:16px;line-height:23px;color:#3475b6;font-weight:400;padding: 0 0 0 123px;" class="wdth">
-                  <a href=url target="_blank" style="text-decoration: none;color: #3475b6;">${content.name}</a>
+                  <a href=url target="_blank" style="text-decoration: none;color: #3475b6;" ...linkAttrs>${content.name}</a>
                 </td>
               </tr>
               <common-table-hr-element height="15" />
